@@ -8,7 +8,7 @@ const ARR4_EN = ['Ctrl', 'Win', 'Alt', 'Space', 'Alt', '', '', '', 'Ctrl'];
 
 
 const renderBoard = () => {
-  const sectionWin = createElemWithClass('section', 'window');
+  const sectionWin = createElemWithClass('textarea', 'monitor');
   const sectionBoard = createElemWithClass('section', 'board');
   const boardBox = createElemWithClass('div', 'board__box');
   const container = createElemWithClass('div', 'container');
@@ -21,8 +21,7 @@ const renderBoard = () => {
   const btnsArray4 =  createBtnArr4(ARR4_EN);
   const btnArr = [];
   btnArr.push(btnsArray0, btnsArray1, btnsArray2, btnsArray3, btnsArray4);
-  console.log(btnArr);
-  
+    
   rowArray.forEach((row, i) => row.append(...btnArr[i]));
 
   boardBox.append(...rowArray);
